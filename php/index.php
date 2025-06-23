@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $outputFile = 'uploads/signed_document.pdf';
 
         // Charger la clé privée
-        $privateKey = file_get_contents('../key/private_key.pem');
+        $privateKey = file_get_contents('../private_key.pem');
         signPdf($inputFile, $outputFile, $privateKey);
         echo json_encode(['status' => 'success', 'message' => 'Document signé avec succès.']);
         exit;
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $signedFile = $file['tmp_name'];
 
         // Chemin vers le certificat public (à adapter)
-        $publicKey = '../key/public_key.pem'; 
+        $publicKey = '../public_key.pem'; 
         
         if (verifySignature($signedFile, $publicKey)) {
             echo json_encode(['status' => 'success', 'message' => 'Signature vérifiée avec succès.']);
