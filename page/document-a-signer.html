@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Sidebar Menu</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/personnel.css">
+  <!-- Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <!-- Sidebar navigation menu -->
+  <nav class="sidebar close">
+    <!-- Sidebar header containing logo and toggle button -->
+    <header>
+      <div class="image-text">
+        <div class="text logo-text">
+          <span class="name">Portail Professeurs</span>
+          <span class="profession"></span>
+        </div>
+      </div>
+      <i class='bx bx-chevron-right toggle'></i>
+    </header>
+
+    <!-- Sidebar menu items -->
+    <div class="menu-bar">
+      <div class="menu">
+        <!-- Search box within the sidebar -->
+        <li class="search-box">
+          <i class='bx bx-search icon'></i>
+          <input type="text" placeholder="Rechercher...">
+        </li>
+        <!-- List of menu links -->
+        <ul class="menu-links">
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bxs-graduation icon'></i>
+              <span class="text nav-text">Moodle</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bxs-user icon'></i>
+              <span class="text nav-text">Étudiants</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bxs-bell icon'></i>
+              <span class="text nav-text">Notifications</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="../page/document.html">
+              <i class='bx bxs-file icon'></i>
+              <span class="text nav-text">Documents</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bxs-envelope icon'></i>
+              <span class="text nav-text">Messagerie</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bxs-calendar icon'></i>
+              <span class="text nav-text">Calendrier</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bxs-cog icon'></i>
+              <span class="text nav-text">Paramètre</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Bottom content of the sidebar -->
+      <div class="bottom-content">
+        <li>
+          <a href="#">
+            <i class='bx bx-log-out icon'></i>
+            <span class="text nav-text">Déconnexion</span>
+          </a>
+        </li>
+        <!-- Dark mode toggle switch -->
+        <li class="mode">
+          <div class="sun-moon">
+            <i class='bx bx-moon moon'></i>
+            <i class='bx bx-sun sun'></i>
+          </div>
+          <span class="mode-text text">Dark mode</span>
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content section -->
+  <section class="home">
+    <div class="text">Document à signer</div>
+    <hr>
+    <div class="container mt-5">
+        <h1 class="text-center">Signer un Document</h1>
+        <form id="signForm" action="../php/index.php" method="POST" enctype="multipart/form-data" class="mt-4">
+            <div class="form-group">
+                <label for="fileInput">Choisissez un document à signer :</label>
+                <input type="file" class="form-control" id="fileInput" name="file" accept="application/pdf" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Signer</button>
+        </form>
+
+        <h1 class="text-center mt-5">Vérifier une Signature</h1>
+        <form id="verifyForm" method="POST" enctype="multipart/form-data" class="mt-4">
+            <div class="form-group">
+                <label for="verifyFileInput">Choisissez le document signé :</label>
+                <input type="file" class="form-control" id="verifyFileInput" name="verifyFile" accept="application/pdf" required>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Vérifier la Signature</button>
+        </form>
+
+        <div id="status" class="mt-4"></div>
+    </div>
+</section>
+
+<script>
+    document.getElementById('signForm').onsubmit = function() {
+        alert("Le document va être signé.");
+    };
+
+    document.getElementById('verifyForm').onsubmit = function() {
+        alert("Vérification de la signature en cours.");
+    };
+</script>
+  <script src="../js/personel.js"></script>
+</body>
+</html>

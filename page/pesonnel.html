@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Sidebar Menu</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/personnel.css">
+  <!-- Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <!-- Sidebar navigation menu -->
+  <nav class="sidebar close">
+    <!-- Sidebar header containing logo and toggle button -->
+    <header>
+      <div class="image-text">
+        <div class="text logo-text">
+          <span class="name">Portail Professeurs</span>
+          <span class="profession"></span>
+        </div>
+      </div>
+      <i class='bx bx-chevron-right toggle'></i>
+    </header>
+
+    <!-- Sidebar menu items -->
+    <div class="menu-bar">
+      <div class="menu">
+        <!-- Search box within the sidebar -->
+        <li class="search-box">
+          <i class='bx bx-search icon'></i>
+          <input type="text" placeholder="Rechercher...">
+        </li>
+        <!-- List of menu links -->
+        <ul class="menu-links">
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bxs-graduation icon'></i>
+              <span class="text nav-text">Moodle</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bxs-user icon'></i>
+              <span class="text nav-text">Étudiants</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bxs-bell icon'></i>
+              <span class="text nav-text">Notifications</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="../page/document.html">
+              <i class='bx bxs-file icon'></i>
+              <span class="text nav-text">Documents</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bxs-envelope icon'></i>
+              <span class="text nav-text">Messagerie</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bxs-calendar icon'></i>
+              <span class="text nav-text">Calendrier</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bxs-cog icon'></i>
+              <span class="text nav-text">Paramètre</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Bottom content of the sidebar -->
+      <div class="bottom-content">
+        <li>
+          <a href="#">
+            <i class='bx bx-log-out icon'></i>
+            <span class="text nav-text">Déconnexion</span>
+          </a>
+        </li>
+        <!-- Dark mode toggle switch -->
+        <li class="mode">
+          <div class="sun-moon">
+            <i class='bx bx-moon moon'></i>
+            <i class='bx bx-sun sun'></i>
+          </div>
+          <span class="mode-text text">Dark mode</span>
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content section -->
+  <section class="home">
+    <div class="text">Moodle</div>
+    <hr>
+  </section>
+
+  <!-- JavaScript file -->
+  <script src="../js/personel.js"></script>
+</body>
+</html>

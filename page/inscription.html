@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Inscription</title>
+    <link rel="stylesheet" href="../css/inscription.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+</head>
+<body>
+
+<header>
+    <h1>UAC</h1>
+</header>
+<br>
+<div class="background">
+    <div class="form-container">
+        <h2 class="text-center">Inscription</h2>
+        <form id="registrationForm" action="../php/inscription.php" method="POST">
+            <div class="form-group">
+                <label for="firstName">Prénom</label>
+                <input type="text" class="form-control" id="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Nom</label>
+                <input type="text" class="form-control" id="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Numéro de téléphone</label>
+                <div class="input-group">
+                    <select class="custom-select" id="countryCode" required style="max-width: 120px;">
+                        <option value="">Indicatif</option>
+                        <option value="+33" data-length="9">France (+33)</option>
+                        <option value="+1" data-length="10">États-Unis (+1)</option>
+                        <option value="+34" data-length="9">Espagne (+34)</option>
+                        <option value="+229" data-length="8">Bénin (+229)</option>
+                        <option value="+49" data-length="11">Allemagne (+49)</option>
+                        <option value="+39" data-length="10">Italie (+39)</option>
+                        <option value="+44" data-length="10">Royaume-Uni (+44)</option>
+                        <option value="+81" data-length="10">Japon (+81)</option>
+                        <option value="+86" data-length="11">Chine (+86)</option>
+                        <option value="+7" data-length="10">Russie (+7)</option>
+                        <option value="+91" data-length="10">Inde (+91)</option>
+                        <option value="+55" data-length="11">Brésil (+55)</option>
+                    </select>
+                    <input type="tel" class="form-control" id="phone" placeholder="Numéro" required pattern="\d*" disabled>
+                </div>
+                <small class="form-text text-muted">Entrez votre numéro sans espaces.</small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" required>
+                <div class="invalid-feedback">Veuillez entrer un email valide.</div>
+            </div>
+            <div class="form-group">
+                <label for="identifiant">Identifiant</label>
+                <input type="text" class="form-control" id="identifiant" 
+                       placeholder="Entrer votre identifiant"  
+                       title="L'identifiant doit contenir entre 4 et 20 caractères, uniquement des lettres et des chiffres." 
+                       required>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <div class="input-group">
+                    <input type="password" class="form-control" id="password" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="togglePassword" style="cursor: pointer;">
+                            <i class="fas fa-eye" id="eyeIcon"></i>
+                        </span>
+                    </div>
+                </div>
+                <small class="form-text text-muted">Doit contenir des majuscules, des minuscules, des chiffres et des caractères spéciaux.</small>
+                <div class="password-strength" id="passwordStrength"></div>
+                <div class="progress">
+                    <div id="passwordProgress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirmer le mot de passe</label>
+                <div class="input-group">
+                    <input type="password" class="form-control" id="confirmPassword" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="toggleConfirmPassword" style="cursor: pointer;">
+                            <i class="fas fa-eye" id="eyeIconConfirm"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="invalid-feedback">Les mots de passe ne correspondent pas.</div>
+                <div class="password-strength" id="confirmPasswordStrength"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">S'inscrire</button>
+        </form>
+    </div>
+</div>
+<br>
+<footer>
+    <p>&copy; 2024 Université de Calavi. Tous droits réservés.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+<script src="../js/inscription.js"></script>
+
+</body>
+</html>

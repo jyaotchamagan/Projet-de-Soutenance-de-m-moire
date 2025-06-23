@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Titre de votre page</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>UAC</h1>
+</header>
+
+<nav>
+    <a href="../index.html" class="trait">Accueil</a>
+    <a href="#" class="trait">Moodle</a>
+    <a href="#" class="trait">Documents</a>
+    <a href="#"class="trait">Messagerie</a>
+
+    <a href="../page/inscription.html">S'inscrire</a>
+    <a href="../page/connexion.html">Se connecter</a>
+</nav>
+<div class="container login-container">
+    <div class="card" style="width: 25rem;">
+        <div class="card-body">
+            <h5 class="card-title text-center">Connexion</h5>
+            <form method="post" action="../php/connexion.php">
+                <div class="form-group">
+                    <label for="identifiant">Identifiant</label>
+                    <input type="text" class="form-control" id="identifiant" 
+                           name="identifiant" placeholder="Entrer votre identifiant" 
+                           required>
+                </div>
+                <div class="form-group">
+                    <label for="motdepasse">Mot de passe</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="motdepasse" 
+                               name="password" placeholder="Entrer votre mot de passe" required>
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="togglePassword" style="cursor: pointer;">
+                                <i class="fas fa-eye" id="eyeIcon"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Université de Calavi. Tous droits réservés.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../js/connexion.js"></script>
+</body>
+</html>

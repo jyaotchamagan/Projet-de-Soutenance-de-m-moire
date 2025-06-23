@@ -1,0 +1,46 @@
+/* Styles CSS par défaut */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    position: relative; /* Changer à relative pour un meilleur positionnement */
+    bottom: 0;
+    width: 100%;
+}
+
+.background {
+    background-image: url(); /* Remplacez par l'URL de votre image */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.password-strength {
+    margin-top: 5px;
+}
+.progress {
+    height: 10px;
+}

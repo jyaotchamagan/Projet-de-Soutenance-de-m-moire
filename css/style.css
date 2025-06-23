@@ -1,0 +1,138 @@
+/* Styles CSS par défaut */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+nav {
+    background: #444;
+    display: flex;
+    flex-wrap: wrap; /* Permettre aux éléments de passer à la ligne */
+    justify-content: space-around; /* Espacer les éléments */
+    padding: 10px;
+}
+nav a {
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    flex-grow: 1; /* Rendre les liens flexibles */
+    text-align: center;
+    min-width: 100px; /* Largeur minimale pour chaque lien */
+}
+
+.trait:hover {
+    text-decoration: none;
+    color: white;
+}
+nav a:nth-child(n+5):hover {
+    background: #695CFE; /* Couleur au survol */
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;}
+main {
+    padding: 20px;
+}
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    position: relative; /* Changer à relative pour un meilleur positionnement */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Styles pour le div d'informations */
+.info-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.more-info {
+    display: none; /* Cacher le contenu supplémentaire par défaut */
+    margin-top: 10px;
+}
+
+.citation {
+    border-left: 5px solid #695CFE;
+    padding-left: 15px;
+    margin-right: 20px;
+    width: 60%;
+}
+.image-container {
+    width: 30%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex .citation blockquote p {
+    text-align: justify;
+}
+
+header {
+    text-align: center;
+    background-color: #333;
+
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+img {
+    padding-bottom:  50px; /* Ajustez cette valeur pour déplacer l'image vers le haut */
+}
+
+.info-box {
+    text-align: justify;
+}
+
+.registration-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-index {
+    width: 25%;
+}
+
+.btn {
+    width: 100%;
+}
+
+/* Media Queries pour le responsive */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Alignement vertical sur petits écrans */
+    }
+    nav a {
+        padding: 10px; /* Réduire le padding sur les petits écrans */
+    }
+}
+
+
+/*------------------------------------------------*/
+
+.login-container {
+    height: 73vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

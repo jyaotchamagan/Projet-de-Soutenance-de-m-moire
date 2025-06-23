@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Mathlete
+Author: Mattox
+Url: http://www.fontsquirrel.com/fonts/mathlete
+
+Font: Sinkin Sans
+Author: K-Type
+Url: http://www.fontsquirrel.com/fonts/sinkin-sans
